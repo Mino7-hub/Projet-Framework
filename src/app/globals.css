@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Merriweather", "Georgia", serif;
+  --font-sans: "Inter", "system-ui", sans-serif;
+
+  --color-primary: #D4AF37;
+  /* Premium Gold */
+  --color-primary-hover: #B5952F;
+  --color-secondary: #ffffff;
+
+  --color-bg: #000000;
+  /* Deep Black */
+  --color-surface: #121212;
+  /* Dark Gray Surface */
+  --color-text: #F5F5F5;
+  /* Off-white text */
+  --color-text-light: #A3A3A3;
+
+  --color-border: #333333;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+  }
+}
+
+@utility glass {
+  background: rgba(26, 26, 26, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility btn-primary {
+  @apply px-4 py-2 bg-[var(--color-primary)] text-white rounded hover:bg-[var(--color-primary-hover)] transition-all shadow-sm font-medium;
+}
+
+@utility btn-secondary {
+  @apply px-4 py-2 bg-white text-[var(--color-text)] border border-[var(--color-border)] rounded hover:bg-gray-50 transition-all font-medium;
+}
+
+@utility card {
+  @apply bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow;
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

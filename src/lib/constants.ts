@@ -1,0 +1,18 @@
+export const GENRE_LIST = [
+    'Fiction',
+    'Non-fiction',
+    'Sci-Fi',
+    'Fantasy',
+    'Mystery',
+    'Romance',
+    'Thriller',
+    'Biography',
+    'History',
+    'Self-Help',
+    'Business',
+    'Psychology',
+    'Horror',
+    'Adventure',
+    'Poetry',
+    'Graphic Novels',
+];
